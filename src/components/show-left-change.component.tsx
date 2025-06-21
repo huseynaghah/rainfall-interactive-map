@@ -6,6 +6,7 @@ const ShowLeftChangeComponent = () => {
 
     const leftMinMax: number[] = useStore('leftMinMax') as number[];
     const leftLoader = useStore('leftLoader') as boolean;
+    const currentDistrict = useStore('currentDistrict') as string;
 
     const [min, setMin] = useState<number | null>(null);
     const [max, setMax] = useState<number | null>(null);
@@ -35,6 +36,7 @@ const ShowLeftChangeComponent = () => {
 
     return (<>
         <Card className={'card'} loading={leftLoader}>
+            <p className={'text-center change-text'}>{currentDistrict === 'all' ? 'All districts' : currentDistrict}</p>
             <p className={'text-center change-text-increase'}>
                 Max Incrase: <span> {max?.toFixed(2) || 'Increase not detected...'} </span>
             </p>

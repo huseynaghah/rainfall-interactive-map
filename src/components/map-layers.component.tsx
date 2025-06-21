@@ -2,7 +2,8 @@ import {store, useStore} from "../store/store.config.ts";
 import {useMap} from "react-leaflet";
 import {useEffect} from "react";
 import {featureLayer} from "esri-leaflet";
-import 'esri-leaflet-vector';
+import 'leaflet.bigimage';
+import 'leaflet.bigimage/dist/Leaflet.BigImage.min.css'
 import {
     renderMap, setChartLoader,
     setChartRainfalls,
@@ -90,7 +91,6 @@ const LayersComponent = () => {
             pane: 'districts',
             where: currentCity === 'all' ? `1=1` : `'name='${currentCity}'`,
         });
-
 
 
         districtsLayer
