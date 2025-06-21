@@ -1,6 +1,6 @@
 # Daily Rainfall by mm Map
 
-Xüsusiyyətlər:
+## Xüsusiyyətlər:
 
 - İnteraktiv xəritə
 - Ümumi xəritədə rayona görə filterləmə
@@ -13,7 +13,7 @@ Xüsusiyyətlər:
 - Rayonlar sərhədinin göstərilməsi (on / off rejimi)
 - Xəritənin anlıq screenshot olunması
 - Poliqon rəngləri üçün legenda
-- Data fetching haqqında xəbərdarlıqlar (zəif şəbəkələrdə xəritə və ya gec yükləndikdə çaşqınlığın qarşısını almaq üçün)
+- Data fetching haqqında xəbərdarlıqlar (zəif şəbəkələrdə xəritə və ya qrafik gec yükləndikdə çaşqınlığın qarşısını almaq üçün)
 - Responsiv layout
 
 
