@@ -121,7 +121,7 @@ const LayersComponent = () => {
 
                     console.log(featureCollection);
 
-                    const dataSet: number[] = featureCollection.features.map((feature: any) => {
+                    const dataSet = featureCollection.features.map((feature: any) => {
                         return { r: feature.properties.rainfall_m, n: feature.properties.name };
                     })
 
@@ -143,7 +143,7 @@ const LayersComponent = () => {
                         return;
                     }
 
-                    const dataSet: number[] = featureCollection.features.map((feature: any) => {
+                    const dataSet = featureCollection.features.map((feature: any) => {
                         return { r: feature.properties.rainfall_m, n: feature.properties.name };
                     })
 
