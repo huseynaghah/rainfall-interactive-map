@@ -1,7 +1,9 @@
 import {useCallback} from "react";
 import {store} from "../store/store.config.ts";
 import {setIsDrawerOpen} from "../store/store.reducer.ts";
-import {CameraOutlined, PrinterOutlined} from "@ant-design/icons";
+// import {CameraOutlined, PrinterOutlined} from "@ant-design/icons";
+import {PrinterOutlined} from "@ant-design/icons";
+
 // import html2canvas from "html2canvas";
 
 const PopupsContainerComponent = () => {

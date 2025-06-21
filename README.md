@@ -11,7 +11,7 @@
 - Seçilmiş filterlərə uyğun LineChart qrafik
 - Hər poliqonda popupla region, yağıntı və dil dəyərlərinin göstərilməsi
 - Rayonlar sərhədinin göstərilməsi (on / off rejimi)
-- Xəritənin anlıq screenshot olunması
+- ~~Xəritənin anlıq screenshot olunması~~ Səhifəni print et düyməsi
 - Poliqon rəngləri üçün legenda
 - Data fetching haqqında xəbərdarlıqlar (zəif şəbəkələrdə xəritə və ya qrafik gec yükləndikdə çaşqınlığın qarşısını almaq üçün)
 - Responsiv layout
