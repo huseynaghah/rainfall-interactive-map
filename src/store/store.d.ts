@@ -9,8 +9,8 @@ export interface IState {
     rightYear: string;
     chartYears: string[];
     chartRainfalls: number[];
-    leftMinMax: number[];
-    rightMinMax: number[];
+    leftMinMax: {r: number, n: string}[];
+    rightMinMax: {r: number, n: string}[];
     mapKey: string;
     showBorders: boolean;
     isDrawerOpen: boolean;

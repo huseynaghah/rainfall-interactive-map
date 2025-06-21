@@ -48,10 +48,10 @@ export const rootSlice = createSlice({
         renderMap: (state: IState) => {
             state.mapKey = uuidv4();
         },
-        setLeftMinMax(state: IState, action: PayloadAction<number[]>) {
+        setLeftMinMax(state: IState, action: PayloadAction<{ r: number, n: string }[]>) {
             state.leftMinMax = action.payload;
         },
-        setRightMinMax(state: IState, action: PayloadAction<number[]>) {
+        setRightMinMax(state: IState, action: PayloadAction<{ r: number, n: string }[]>) {
             state.rightMinMax = action.payload;
         },
         setChartRainfalls(state: IState, action: PayloadAction<number[]>) {

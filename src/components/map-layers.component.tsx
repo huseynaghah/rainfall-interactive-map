@@ -2,8 +2,6 @@ import {store, useStore} from "../store/store.config.ts";
 import {useMap} from "react-leaflet";
 import {useEffect} from "react";
 import {featureLayer} from "esri-leaflet";
-import 'leaflet.bigimage';
-import 'leaflet.bigimage/dist/Leaflet.BigImage.min.css'
 import {
     renderMap, setChartLoader,
     setChartRainfalls,
@@ -17,6 +15,7 @@ import {layersUrl, token} from "../plugins/variables.ts";
 import "esri-leaflet-vector";
 import {vectorBasemapLayer} from "esri-leaflet-vector";
 import {Id, toast} from "react-toastify";
+import 'leaflet.bigimage/dist/Leaflet.BigImage.min.js';
 
 const LayersComponent = () => {
 
@@ -92,7 +91,6 @@ const LayersComponent = () => {
             where: currentCity === 'all' ? `1=1` : `'name='${currentCity}'`,
         });
 
-
         districtsLayer
             .query()
             .run((error, featureCollection) => {
@@ -121,8 +119,10 @@ const LayersComponent = () => {
                         return;
                     }
 
+                    console.log(featureCollection);
+
                     const dataSet: number[] = featureCollection.features.map((feature: any) => {
-                        return feature.properties.rainfall_m;
+                        return { r: feature.properties.rainfall_m, n: feature.properties.name };
                     })
 
                     store.dispatch(setLeftMinMax(dataSet));
@@ -144,7 +144,7 @@ const LayersComponent = () => {
                     }
 
                     const dataSet: number[] = featureCollection.features.map((feature: any) => {
-                        return feature.properties.rainfall_m;
+                        return { r: feature.properties.rainfall_m, n: feature.properties.name };
                     })
 
                     store.dispatch(setRightMinMax(dataSet));
