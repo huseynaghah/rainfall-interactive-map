@@ -14,19 +14,21 @@
   }
 }
 
-.change-text{
-  &-increase{
+.change-text {
+  &-increase {
     font-size: 16px;
     color: #30b800;
+
     span {
       font-style: italic;
       color: black;
     }
   }
 
-  &-decrease{
+  &-decrease {
     font-size: 16px;
     color: #ed1111;
+
     span {
       font-style: italic;
       color: black;
@@ -34,32 +36,33 @@
   }
 }
 
-.side-panel{
+.side-panel {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
-  & > div{
+  & > div {
     height: 32%;
   }
 }
 
-.card{
+.card {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 100%;
 }
 
-.line-chart{
+.line-chart {
   position: relative;
   height: 25vh;
   width: 100%;
 }
 
-.popup{
-  &-container{
+.popup {
+  &-container {
     position: absolute;
     top: 30px;
     padding: 10px;
@@ -68,17 +71,17 @@
     cursor: pointer;
     font-style: italic;
 
-    &:hover{
+    &:hover {
       transform: scale(1.1);
       box-shadow: 4px 4px 5px rgba(168, 168, 168, 0.46);
     }
   }
 
-  &-left{
+  &-left {
     left: 0;
   }
 
-  &-right{
+  &-right {
     right: 0;
     display: flex;
     gap: 8px;
@@ -86,18 +89,67 @@
 
 }
 
-.legenda{
-  &-item{
+.legenda {
+  &-item {
     display: flex;
     align-items: center;
     margin-bottom: 12px;
   }
 
-  &-colorbox{
+  &-colorbox {
     width: 20px;
     height: 20px;
-    display:inline-block;
+    display: inline-block;
     margin-right: 8px;
     border: 1px solid #999;
+  }
+}
+
+.container-grid {
+  height: 70vh;
+  display: grid;
+  width: 100%;
+  grid-template-columns:1fr 8fr 1fr;
+  grid-template-rows: 1fr 1fr 3fr;
+
+  & > div {
+    height: 100%;
+  }
+}
+
+.grid {
+  &-item-1 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  &-item-2 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  &-item-3 {
+    grid-column: 1;
+    grid-row: 3 / 5;
+  }
+
+  &-item-4 {
+    grid-column: 2 / 10;
+    grid-row: 1 / 4;
+  }
+
+  &-item-5 {
+    grid-column: 10;
+    grid-row: 1;
+  }
+
+  &-item-6 {
+    grid-column: 10;
+    grid-row: 2;
+  }
+
+  &-item-7 {
+    grid-column: 10;
+    grid-row: 3;
   }
 }

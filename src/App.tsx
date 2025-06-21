@@ -29,33 +29,32 @@ function App() {
         <>
             <div className={'container-fluid'}>
                 <div className={'row'}>
-                    <div className={'col-lg-2 mt-20'}>
+                    <div className={'col-lg-2 col-6 mt-1 order-lg-1'}>
                         <div className={'side-panel'}>
                             <SelectDistrictComponent/>
                             <SelectLeftYearComponent/>
                             <ShowLeftChangeComponent/>
                         </div>
                     </div>
-                    <div className={'col-lg-8 mt-20'}>
+                    <div className={'col-lg-8 col-12 mt-1 order-lg-2 order-3'}>
                         <MapContainer key={mapKey} style={{height: '70vh'}} zoom={7} center={centerPos}>
                             <LayersComponent/>
                         </MapContainer>
                     </div>
-                    <div className={'col-lg-2 mt-20'}>
+                    <div className={'col-lg-2 col-6 mt-1 order-lg-3 order-2'}>
                         <div className={'side-panel'}>
                             <SelectBasemapComponent/>
                             <SelectRightYearComponent/>
                             <ShowRightChangeComponent/>
                         </div>
                     </div>
-                    <div className={'col-lg-12'}>
-                        <ChartComponent/>
-                    </div>
-                    <LegendComponent/>
-                    <PopupsContainerComponent/>
                 </div>
-
+                <div className={'col-lg-12 mt-1'}>
+                    <ChartComponent/>
+                </div>
             </div>
+            <LegendComponent/>
+            <PopupsContainerComponent/>
             <ToastContainer
                 position="bottom-right"
                 autoClose={1200}

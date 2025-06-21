@@ -11,11 +11,11 @@ const PopupsContainerComponent = () => {
     }, []);
 
     const handleRightPopupClick = useCallback(() => {
-        const mapElement: HTMLElement | null = document.querySelector('.leaflet-container');
-        if(mapElement) {
-            html2canvas(mapElement)
+        const body: HTMLElement | null = document.querySelector('body');
+        if(body) {
+            html2canvas(body, {useCORS: true})
                 .then((canvas)=>{
-                    const imageData = canvas.toDataURL("image/png");
+                    const imageData = canvas.toDataURL('image/jpeg', 0.9);
                     const link = document.createElement("a");
                     link.download = "map_screenshot.png";
                     link.href = imageData;
@@ -31,12 +31,12 @@ const PopupsContainerComponent = () => {
             <div
                 className={'popup-container popup-left'}
                 onClick={handleLeftPopupClick}>
-                <p>Open Legend</p>
+                →
             </div>
             <div
                 className={'popup-container popup-right'}
                 onClick={handleRightPopupClick}>
-                <CameraOutlined /><p>Take Screenshot</p>
+                <CameraOutlined />
             </div>
         </>
     )
