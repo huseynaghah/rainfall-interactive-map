@@ -14,6 +14,7 @@ Xüsusiyyətlər:
 - Xəritənin anlıq screenshot olunması
 - Poliqon rəngləri üçün legenda
 - Data fetching haqqında xəbərdarlıqlar (zəif şəbəkələrdə xəritə və ya gec yükləndikdə çaşqınlığın qarşısını almaq üçün)
+- Responsiv layout
 
 
 
