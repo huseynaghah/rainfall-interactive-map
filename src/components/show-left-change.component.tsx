@@ -36,10 +36,10 @@ const ShowLeftChangeComponent = () => {
     return (<>
         <Card className={'card'} loading={leftLoader}>
             <p className={'text-center change-text-increase'}>
-                Maksimal Artım: <span> {max?.toFixed(2) || 'Artım aşkarlanmadı...'} </span>
+                Max Incrase: <span> {max?.toFixed(2) || 'Increase not detected...'} </span>
             </p>
             <p className={'text-center change-text-decrease'}>
-                Maksimal Azalma: <span>{min?.toFixed(2) || 'Azalma aşkarlanmadı...'}</span>
+                Max Decrease: <span>{min?.toFixed(2) || 'Decrease not detected...'}</span>
             </p>
         </Card>
     </>)

@@ -153,7 +153,7 @@ const LayersComponent = () => {
         }
         const getChartFeatures = () => {
 
-            const id = toast.loading("Chart üçün məlumatlar yüklənir...")
+            const id = toast.loading("Fetching chart data...")
             store.dispatch(setChartLoader(true));
 
             const allFeatures = {
@@ -168,7 +168,7 @@ const LayersComponent = () => {
                 .count(function (error, totalCount) {
                 if (error) {
                     toast.update(id!, {
-                        render : 'Say alınarkən xəta baş verdi!',
+                        render : 'Error occured when fetching count!',
                         type  : 'error',
                         isLoading: false,
                         autoClose : 1000,
@@ -178,7 +178,7 @@ const LayersComponent = () => {
 
                 if (totalCount === 0) {
                     toast.update(id!, {
-                        render : 'Bu layer-də məlumat tapılmadı',
+                        render : 'There are no data in this layer...',
                         type  : 'info',
                         isLoading: false,
                         autoClose : 1000,
@@ -187,7 +187,7 @@ const LayersComponent = () => {
                 }
 
                     toast.update(id!, {
-                        render : `Cəmi ${totalCount} obyekt tapıldı...`,
+                        render : `Total ${totalCount} object found...`,
                         type  : 'info',
                         isLoading: true,
                     })
@@ -216,7 +216,7 @@ const LayersComponent = () => {
                         const featuresFetchedSoFar = allFeatures.features.length;
 
                        toast.update(id!, {
-                           render : `Çəkildi: ${featuresFetchedSoFar} / ${totalCount}`,
+                           render : `Fetched: ${featuresFetchedSoFar} / ${totalCount}`,
                            type  : 'info',
                            isLoading: true,
                        })
@@ -225,7 +225,7 @@ const LayersComponent = () => {
                             getPage(featuresFetchedSoFar);
                         } else {
                             toast.update(id!, {
-                                render : `Chart data-sı uğurla çəkildi!`,
+                                render : `Chart data are fetched successfully!`,
                                 type  : 'success',
                                 isLoading: false,
                                 autoClose : 1000,
@@ -273,7 +273,7 @@ const LayersComponent = () => {
 
         rainfallLeftLayer.on('load', () => {
             toast.update(leftToastId!, {
-                render : 'Sol yağış layeri uğurla yükləndi!',
+                render : 'Left rainfall layer fetched successfully!',
                 type  : 'success',
                 isLoading: false,
                 autoClose : 1000,
@@ -281,24 +281,24 @@ const LayersComponent = () => {
         });
         rainfallRightLayer.on('load', () => {
             toast.update(rightToastId!, {
-                render : 'Sağ yağış layeri uğurla yükləndi!',
+                render : 'Right rainfall layer fetched successfully!',
                 type  : 'success',
                 isLoading: false,
                 autoClose : 1000,
             })
         });
         rainfallLeftLayer.on('loading', () => {
-            leftToastId = toast.loading("Sol yağış layeri yüklənir...");
+            leftToastId = toast.loading("Left rainfall layer is fetching!...");
         })
         rainfallRightLayer.on('loading', () => {
-            rightToastId = toast.loading("Sağ yağış layeri yüklənir...");
+            rightToastId = toast.loading("Right rainfall layer is fetching!...");
         })
         districtsLayer.on('loading', () => {
-            districtsToastId = toast.loading("Rayonlar layeri yüklənir...");
+            districtsToastId = toast.loading("Districts layer is fetching!...");
         })
         districtsLayer.on('load', () => {
             toast.update(districtsToastId!, {
-                render : 'Rayonlar layeri uğurla yükləndi!',
+                render : 'Districts layer fetched successfully!',
                 type  : 'success',
                 isLoading: false,
                 autoClose : 1000,
